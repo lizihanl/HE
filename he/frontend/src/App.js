@@ -1,10 +1,19 @@
+
 import React from 'react';
-//import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import ProductList from './pages/ProductList';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to My Online Store</h1>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/products" element={<ProductList />} />
+      </Routes>
     </div>
   );
 }
