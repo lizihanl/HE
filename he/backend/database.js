@@ -1,17 +1,18 @@
-const mysql = require('mysql');
+const mysql = require('mysql2/promise');
 
-const db = mysql.createConnection({
-  host: 'He',
-  user: 'He',
-  password: 'password',
-  database: 'myonlinestore'
-});
+async function connectToDatabase() {
+    try {
+        const db = await mysql.createConnection({
+          host: 'localhost', 
+          user: 'root',//database-username
+          password: '',//database-password
+          database: 'my_database'//database-name
+        });
+        console.log('Connected to the MySQL database');
+        return db;
+    } catch (err) {
+        console.error('Error connecting to the database:', err);
+    }
+}
 
-db.connect((err) => {
-  if (err) {
-    throw err;
-  }
-  console.log('MySQL connected...');
-});
-
-module.exports = db;
+module.exports = connectToDatabase;

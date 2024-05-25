@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+start mysql: 'mysql -u root -p'
+end mysql: 'quit'
+
+start frontend: 
+start backend: 'node server.js'
+exit frontend/backend: control+c
+
